@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <name>typeSystemDescriptor</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+  <imports>
+    <import location="AnswerScorerDescriptor.xml"/>
+    <import location="TokenAnnotatorDescriptor.xml"/>
+    <import location="BaseAnnotatorDescriptor.xml"/>
+    <import location="DocumentAnnotatorDescriptor.xml"/>
+    <import location="EvaluatorDescriptor.xml"/>
+    <import location="TestElementAnnotatorDescriptor.xml"/>
+    <import location="NGramAnnotatorDescriptor.xml"/>
+  </imports>
+</typeSystemDescription>

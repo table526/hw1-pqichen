@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <name>typeSystemDescriptor</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+  <imports>
+    <import location="BaseAnnotatorDescriptor.xml"/>
+    <import location="TokenAnnotatorDescriptor.xml"/>
+  </imports>
+  <types>
+    <typeDescription>
+      <name>edu.cmu.test.Types.Question</name>
+      <description>This type represents the question displayed in the document. It has attribute begin and end to record its span. Also it contains a list of Tokens that are in this question.</description>
+      <supertypeName>edu.cmu.test.Types.Base</supertypeName>
+      <features>
+        <featureDescription>
+          <name>source</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>confidence</name>
+          <description/>
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>TokenList</name>
+          <description/>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>edu.cmu.test.Types.Token</elementType>
+          <multipleReferencesAllowed>true</multipleReferencesAllowed>
+        </featureDescription>
+        <featureDescription>
+          <name>isCorrect</name>
+          <description/>
+          <rangeTypeName>uima.cas.Boolean</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.cmu.test.Types.Answer</name>
+      <description> Similar to test.Types.Question, the type has exactly the same features. But it has a unique Boolean feature ‘isCorrect’ to represent its correctness.</description>
+      <supertypeName>edu.cmu.test.Types.Base</supertypeName>
+      <features>
+        <featureDescription>
+          <name>source</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>confidence</name>
+          <description/>
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>TokenList</name>
+          <description/>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>edu.cmu.test.Types.Token</elementType>
+          <multipleReferencesAllowed>true</multipleReferencesAllowed>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>
